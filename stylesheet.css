@@ -32,15 +32,20 @@ li {
   background-color: #26d0c9;
   color: #fff;
 }
+
 .header-logo {
   float: left;
   font-size: 36px;
-  padding: 20px 40px;
+  padding: 20px 40px; /*クリック範囲を広げるために敢えてpadding？*/
 }
 
 .header-list li {
   float: left;
-  padding: 33px 20px;
+  padding: 33px 20px; /*上記と同様にクリック範囲を広げるために敢えてpadding？*/
+}
+
+.copy-container {
+  padding: 100px 80px;
 }
 
 .copy-container h1 {
@@ -48,20 +53,11 @@ li {
 }
 
 .copy-container h2 {
-  font-size: 40px;
+  font-size: 60px;
 }
 
 .copy-container span {
-  color: red;
-}
-
-.copy-container {
-  padding: 100px 80px;
-}
-
-.contents {
-  margin: 0 80px 100px 80px;
-  height: 500px;
+  color: #ff4a4a;
 }
 
 .contents-item {
@@ -69,41 +65,55 @@ li {
   margin-right: 40px;
 }
 
+.contents-item p {
+  margin-top: 30px; /*Pタグに関してはmargin使うのが通常？*/
+  font-size: 24px;
+}
+
 .section-title {
-  font-size: 28px;
   border-bottom: 2px solid #dee7ec;
-  padding-bottom: 15px;
+  font-size: 28px;
+  padding-bottom: 15px; /*padding-topは.copy-containerでpadding100pxを指定済みのため不要。ボーダーを作成しているためにpadding？*/
   margin-bottom: 50px;
 }
 
-.contents-item p {
-  margin: 30px;
-  font-size: 24px;
+.contents {
+  height: 500px;
+  padding: 0 80px 100px 80px; /*paddingとmargin迷ったら解説6.余白の調整の図を見る→contents部分の範囲が見えるため答えが分かる。上右下左でそれぞれ設定したがOK?*/
+}
+
+.contact-form {
+  padding: 0 80px 100px; /*padding: 上 左右 下;の意味*/
 }
 
 input,
 textarea {
+  width: 400px;
+  font-size: 18px;
+  border: 1px solid #dee7ec;
   padding: 20px;
+  margin-top: 10px; /*margin-topとmargin-bottomを合わせてmargin:10px 0 30 0ではダメ？*/
   margin-bottom: 30px;
-  margin-top: 10px;
 }
 
 .contact-submit {
+  color: #889eab;
+  background-color: #dee7ec;
   padding: 20px;
-  margin-bottom: 30px;
   margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 .footer {
+  padding: 40px;
+  height: 120px;
   background-color: #2f5167;
   color: #fff;
-  height: 120px;
-  padding: 40px;
 }
 
 .footer-logo {
-  float: left;
   font-size: 32px;
+  float: left; /*解説のくだりの意味がunknown*/
 }
 
 .footer-list {
